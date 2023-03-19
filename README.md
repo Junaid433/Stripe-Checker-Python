@@ -12,7 +12,7 @@ python main.py
 Change : 
 > bot_token in extra.py
 
-> '766109755' with your telegram id if so hits will be delivered to your inbox
+> '766109755' with your telegram id in main.py line 57 and 66 if so hits will be delivered to your inbox
 
 Usage : 
 > Enter a file path your credit cards are located. You can drag and drop too
